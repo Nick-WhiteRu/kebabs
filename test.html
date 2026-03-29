@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Шаурма & Фастфуд</title>
+<style>
+body {margin:0;font-family:Arial;background:#0f0f0f;color:#fff;}
+
+nav {
+  background: rgba(20,20,20,0.7);
+  backdrop-filter: blur(15px);
+  padding: 12px 30px;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+}
+
+.logo {
+  font-weight:bold;
+  font-size:20px;
+  letter-spacing:1px;
+}
+
+nav .links {
+  display:flex;
+  gap:20px;
+}
+
+nav .links a {
+  color:#aaa;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.2s;
+}
+
+nav .links a:hover {
+  color:#fff;
+}
+
+.cart {
+  background: transparent;
+  border:1px solid #333;
+  padding:6px 10px;
+  border-radius:8px;
+  font-size:14px;
+}
+
+.logo {font-weight:bold;font-size:18px;}
+
+nav .links a {
+  color:#fff;
+  margin:0 10px;
+  text-decoration:none;
+}
+
+.cart {
+  background:#00c853;
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+.hero {
+  background:url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover;
+  padding:120px 20px;
+  text-align:center;
+}
+
+.menu {padding:50px 20px;text-align:center;}
+
+.filters {margin-bottom:20px;}
+.filters button {
+  margin:5px;
+  padding:8px 12px;
+  border:none;
+  border-radius:6px;
+  background:#1a1a1a;
+  color:#fff;
+  cursor:pointer;
+}
+
+.items {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+}
+
+.item {
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+  padding:15px;
+  border-radius:12px;
+  width:260px;
+  transition:0.3s;
+  position:relative;
+}
+
+.item:hover {transform:translateY(-7px) scale(1.02);}
+
+.badge {
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:red;
+  padding:4px 8px;
+  font-size:12px;
+  border-radius:6px;
+}
+
+.item img {
+  width:100%;height:180px;object-fit:cover;border-radius:10px;
+}
+
+.price {margin-top:10px;font-weight:bold;}
+
+.info {font-size:13px;color:#ccc;}
+
+.btn {
+  margin-top:10px;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#00c853;
+  color:white;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.btn:hover {background:#00e676;transform:scale(1.05);} 
+
+footer {background:#000;text-align:center;padding:20px;margin-top:40px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">🌯 Shawarma</div>
+  <div class="links">
+    <a href="#">Главная</a>
+    <a href="#menu">Меню</a>
+    <a href="#contacts">Контакты</a>
+  </div>
+  <div class="cart">🛒 0</div>
+</nav>
+
+<section class="hero">
+  <h1>Ваше название</h1>
+  <p>Быстро • Вкусно • Сочно</p>
+</section>
+
+<section class="menu" id="menu">
+  <h2>Меню</h2>
+
+  <div class="filters">
+    <button>Все</button>
+    <button>Шаурма</button>
+    <button>Бургеры</button>
+    <button>Закуски</button>
+  </div>
+
+  <div class="items">
+
+    <div class="item">
+      <div class="badge">🔥 Хит</div>
+      <img src="../kebab/img/1641155515_1-abrakadabra-fun-p-shaurma-na-temnom-fone-1.jpg">
+      <h3>Шаурма с курицей</h3>
+      <div class="info">⭐ 4.8 • ⏱ 10 мин</div>
+      <div class="price">70 лей</div>
+      <button class="btn">Заказать</button>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+      <h3>Бургер</h3>
+      <div class="info">⭐ 4.6 • ⏱ 8 мин</div>
+      <div class="price">65 лей</div>
+      <button class="btn">Заказать</button>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5">
+      <h3>Картофель фри</h3>
+      <div class="info">⭐ 4.5 • ⏱ 5 мин</div>
+      <div class="price">35 лей</div>
+      <button class="btn">Заказать</button>
+    </div>
+
+    <div class="item">
+      <img src="../kebab/img/2.jpg">
+      <h3>Донер</h3>
+      <div class="info">⭐ 4.7 • ⏱ 9 мин</div>
+      <div class="price">75 лей</div>
+      <button class="btn">Заказать</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="contacts" class="menu">
+  <h2>Контакты</h2>
+  <p>📍 Кишинёв</p>
+  <p>📞 +373 600 00 000</p>
+  <p>⏰ 10:00 - 23:00</p>
+</section>
+
+<footer>
+  <p>© 2026 Шаурма</p>
+</footer>
+
+</body>
+</html>
